@@ -1,0 +1,56 @@
+
+.cityName-Div {
+    color:white;
+    background-color:#2185D0;
+    padding:10px;
+    margin:0px;
+   // 
+}
+
+#card-hourly{
+    padding:1em;
+    background-color: black;
+    color: white;
+    //box-shadow: 5px 5px 9px red;
+    border-radius: 2em;
+    img {
+        position: absolute; 
+        top: 10%;
+        left:65%;
+        height:64px;
+        width: 64px;
+    }
+    .j{
+        //display: none;
+    }
+    &:hover{
+       // box-shadow: 10px 20px 10px red;
+        //border-radius: 2em;
+        .j{
+            border-radius: 4px; 
+            background-color: white;
+            color:black
+        }
+
+    }
+    
+}
+.inner-nav{
+    margin-top: 0px;
+    padding: 0px 2px 5px 3px;
+    background-color:black;
+    margin-bottom: 10px;
+    .btn{
+        padding: 4px 18px 4px 18px;
+        background-color: black;
+        border-radius: 8px;
+        margin: 10px 5px 0px 25px;
+        color: white;
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+
+}
+

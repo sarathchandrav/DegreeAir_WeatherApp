@@ -1,0 +1,65 @@
+$fontSize : large;
+$margin : 1em;
+$padding: 1em;
+$fontWeight:bolder;
+$fontColor:white;
+$backgroundColor:black;
+
+.topNavBar {
+    //background-color: $backgroundColor;
+    div{
+        background-color: $backgroundColor;
+        padding: $padding;
+        a {
+            font-size: $fontSize;
+            font-weight: $fontWeight;
+        }
+        .lable {
+            margin: $margin;
+            padding: $padding;
+            font-weight: $fontWeight;
+            &:hover{
+                background-color: rgba(56, 55, 55, 0.993);
+            }
+            .link {
+                color:$fontColor;
+               
+            } 
+        }
+        
+        .logIn-btn{
+            margin-left: 4px;
+            float:right;
+            padding: 4px 18px 4px 18px;
+            background-color: black;
+            color: white;
+            font-size: medium;
+            font-weight: bolder;
+            border-radius: 5px;
+            &:hover{
+                background-color:white;
+                color: black;
+            }
+        }
+        .signIn-btn{
+            float:right;
+            margin-left: 5px;
+            padding: 4px 18px 4px 18px;
+            background-color: black;
+            color: white;
+            font-size: medium;
+            font-weight: bolder;
+            border-radius: 5px;
+            &:hover{
+                background-color:white;
+                color: black;
+            }
+        }
+    }
+
+    
+}
+
+.auth-btn{
+    display: inline;
+}

@@ -1,0 +1,41 @@
+.main-container{
+    position: relative;
+    top: 3em;
+    border: solid 3px black;
+    height: 375px;
+    background-color: lightskyblue;
+    padding: 2em;
+    font-weight: bold;
+}
+.spanDiv{
+    font-size: 2em;
+}
+.weatherIcon{
+    border-radius: 5em;
+    width: 5em;
+}
+.tempDiv{
+    font-size: 6em;
+}
+.realfeelDiv{
+    position: relative;
+     left: 7%;
+}
+.infoDiv{
+    font-size: 2em;
+    top: 1em;
+    background-color: powderblue;
+    left: 40%;
+    width: 58%;
+    padding: 20px;
+    position: absolute;
+}
+.SeeHourly-btn{
+    position: relative;
+    width: 38%;
+    top: 3em;
+    padding: 13px;
+    color: cornsilk;
+    font-size: 2em;
+    background-color: cadetblue;
+}
