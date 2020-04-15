@@ -31,7 +31,7 @@ function App() {
         <Route path="/WeatherReport/Search/:cityname" exact component={inputLocationWeather} />
         <Route path="/WeatherReport/hourly/:cityname" exact component={Hourly} />
         <Route path="/WeatherReport/daily/:cityname" exact component={Daily} />
-        <Route path="/AirQuality/Search/:cityname" exact component={inputLocationAirQuality} />
+        <Route path="/AirQuality/:cityname" exact component={inputLocationAirQuality} />
         {/* <Route path="/WeatherReport/today" component={Today} /> */}
       </BrowserRouter>
     </div>

@@ -6,7 +6,7 @@ import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 class AirQualSearch extends React.Component {
     renderInput = (searchProps) => {
-        const search = "/AirQuality/Search/"+searchProps.input.value;
+        const search = "/AirQuality/"+searchProps.input.value;
         return (<div><input {...searchProps.input} /><button><Link to={search}>search</Link></button></div>);
     }
 
