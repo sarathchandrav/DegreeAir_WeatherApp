@@ -32,18 +32,15 @@ const Button = styled.button`
                             color: ${props => props.inverted ? "white" : "black"};
                             background-color: ${props => props.inverted ? "black" : "white"};
                             `
-
 const AreaLabel = styled(Button)`
                             height:40px;
                             width:100%;
                             
                             `
-
 const AreaContainer = styled.div`
                                 width:30%;
                                 background-color: #C1C1C1;
                                 `
-
 const R_SideNav = styled(AreaContainer)`
                                         width:70%;
                                         float:Right;
@@ -81,17 +78,6 @@ class inputLocationAirQuality extends React.Component {
             5000
         );
     }
-
-    scrollToDiv = () => {
-        console.log("hi")
-    }
-
-    handleClick = () =>
-        ref.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-
     cityLocationList() {
         return (
             <SideNav>
