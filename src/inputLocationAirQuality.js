@@ -51,10 +51,8 @@ const Text = styled.p`font-size:larger;
                     border:1px solid black;
                     background: "green"
                     `
-
-
 const NavBar = styled.div`       
-                        background: #2185D0;
+                        background: #2185D0; 
                         padding:10px;
                         color: white;
                         `
