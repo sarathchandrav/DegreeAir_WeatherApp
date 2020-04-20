@@ -32,7 +32,6 @@ const NavBar = (props) => {
         }
         if(props.id === "WeatherReport-Search") {
             const imgSrc = props.weather.image;
-            //console.log(props.weather.image)
             return (
                 <NavSearch>
                     <Label> Current Location:{props.weather.loco.name},</Label>
