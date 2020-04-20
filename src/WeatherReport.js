@@ -78,6 +78,7 @@ class WeatherReport extends React.Component {
                     <div className="Header-container">
                                 <NavBar id="WeatherReport-Search" weather = {this.state}/>
                                 {/* <WeatherRepoSearch  /> */}
+                                
                                 {/* <form onSubmit={(event) => this.onFormSubmit(event)} >
                                     <i className="search icon"></i>
                                     <input
