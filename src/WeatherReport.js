@@ -2,6 +2,8 @@ import React from 'react';
 import './css/WeatherReport.scss'
 import axios from 'axios';
 import CurrentLocoWeather from './CurrentLocoWeather';
+import WeatherRepoSearch from './WeatherRepoSearch';
+import NavBar from './NavBar';
 
 
 
@@ -25,7 +27,7 @@ class WeatherReport extends React.Component {
 
     async componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(position => this.setState({ lati: position.coords.latitude, long: position.coords.longitude }), err => console.log("f"))
-        const responce = await axios.get('http://api.weatherstack.com/current?access_key=a296dd67113d575ef3e5ab0bd9e2fbc3&query=fetch:ip');
+        const responce = await axios.get('http://api.weatherstack.com/current?access_key=7c3ceae98753154b680ece1c3a04f7a1&query=fetch:ip');
        // const responce1 = await axios.get('http://api.openweathermap.org/data/2.5/weather?', { params: {  q: "delhi", appid: '985f3c4b08b96419034a413600c8ffda' } });
         //console.log(responce)
         if(responce.data.location.name === "Hyderabad-Deccan")
@@ -74,19 +76,16 @@ class WeatherReport extends React.Component {
                 ) : (
                     <div>
                     <div className="Header-container">
-                                <p>
-                                    Current Location:{this.state.loco.name}, Temperature: <img alt="description of image"  src={this.state.image} />  {this.state.currentObservation.temperature}&deg;
-                                </p>
-                                {/* <SearchBar /> */}
-                
-                                <form onSubmit={(event) => this.onFormSubmit(event)} >
+                                <NavBar id="WeatherReport-Search" weather = {this.state}/>
+                                {/* <WeatherRepoSearch  /> */}
+                                {/* <form onSubmit={(event) => this.onFormSubmit(event)} >
                                     <i className="search icon"></i>
                                     <input
                                         value={this.state.SearchValue}
                                         onChange={(e) => this.setState({ SearchValue: e.target.value })} placeholder='Enter The City' type='text' name='name' style={{ width: 'auto' }} />
                                     <button onClick={(event) => this.onFormSubmit(event)} >Search</button>
-                
-                                </form>
+                                </form> */}
+
                                 <div className="inner-nav">
                                     <button onClick={() => this.props.history.push(hourly)} className="btn">Hourly</button>
                                     <button onClick={() => this.props.history.push(daily )} className="btn" >Daily</button>

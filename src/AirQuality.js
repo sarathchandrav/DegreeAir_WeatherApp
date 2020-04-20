@@ -4,10 +4,10 @@ import { fetchAPI } from './actions/index';
 
 import './css/AirQuality';
 import AirQualSearch from './AirQualSearch';
-
+import NavBar from './NavBar';
 import styled from 'styled-components';
 
-const NavBar = styled.div`       
+const NavSearch = styled.div`       
                         background: #2185D0;
                         padding:0px 5px 0px 5px;
                         color: white;
@@ -73,11 +73,12 @@ class AirQuality extends React.Component {
         if (this.props.posts.source) {
             const imgSrc = this.props.posts.clouds.split(",")[1].slice(8)
             return (
-                <NavBar>
-                    <Label>{this.props.posts.source.name}, {this.props.posts.country}</Label>
-                    <img src={imgSrc}></img>
-                    <SearchBarDiv><AirQualSearch /></SearchBarDiv>
-                </NavBar>
+                // <NavSearch>
+                //     <Label>{this.props.posts.source.name}, {this.props.posts.country}</Label>
+                //     <img src={imgSrc}></img>
+                //     <SearchBarDiv><AirQualSearch /></SearchBarDiv>
+                // </NavSearch>
+                <NavBar pollution={this.props.posts} id="AirQuality-NavBar"/>
             )
         }
 
@@ -109,6 +110,7 @@ class AirQuality extends React.Component {
                 ) : (
                         <div className="innerContainer">
                             {this.searchBar()}
+                            
                             {this.pollutionInfo()}
                             <Table>
                                 <tbody >

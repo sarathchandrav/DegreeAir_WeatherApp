@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-
-
+import {connect} from 'react-redux'
 import {Link} from 'react-router-dom';
+import {signInn, signOutn} from './actions/index'
 import {
   Button,
   Container,
@@ -9,11 +9,10 @@ import {
   Header,
   Icon,
   List,
-  Menu,
   Segment,
 } from 'semantic-ui-react'
-
-
+import  airqualityimg from '../images/airquality.jpg';
+import  weatherrepoimg from '../images/weather.jpg';
 
  
 const HomepageHeading = () => (
@@ -48,7 +47,29 @@ const HomepageHeading = () => (
   </div>
 )
 
-const HomepageLayout = () => (
+const WeatherRepo = (props) =>{
+  //console.log(props)
+  if(props.isSignedIn)
+  return(
+    <Button size='huge'><Link to="/WeatherReport">Check Them Out</Link></Button>
+  );
+  else{
+    return<Button> Please Sign In </Button>
+  }
+}
+
+const airQuality = (props) =>{
+  //console.log(props)
+  if(props.isSignedIn)
+  return(
+    <Button size='huge'><Link to="/AirQuality">Check Them Out</Link></Button>
+  );
+  else{
+    return<Button> Please Sign In </Button>
+  }
+}
+
+const MainHomepageLayout = (props) => (
   <div >
     <div className='MainContainer' style={{ minHeight: 700, padding: '1em 0em', backgroundColor:'black' }} >
     <HomepageHeading />
@@ -66,12 +87,13 @@ const HomepageLayout = () => (
             
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <img alt="description of image" src={require('./weather.jpg')} />
+            <img alt="description of image" src={weatherrepoimg} />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button size='huge'><Link to="/WeatherReport">Check Them Out</Link></Button>
+            {/* <Button size='huge'><Link to="/WeatherReport">Check Them Out</Link></Button> */}
+            {WeatherRepo(props)}
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -90,12 +112,13 @@ const HomepageLayout = () => (
             
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <img alt="description of image" src={require('./airquality.jpg')} />
+            <img alt="description of image" src={airqualityimg} />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button size='huge'>Check Them Out</Button>
+          {airQuality(props)}
+            
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -129,4 +152,22 @@ const HomepageLayout = () => (
     </Segment>
   </div>
 )
-export default HomepageLayout
+//export default HomepageLayout
+
+class HomepageLayout extends React.Component{
+  render(){
+    //console.log(this.props)
+    return(
+      <div>
+        {MainHomepageLayout(this.props)}
+      </div>
+    )
+  }
+}
+
+
+const mapStateToProps = (state) =>{
+  return {isSignedIn:state.auth.isSignedIn};
+};
+
+export default connect(mapStateToProps,{signInn,signOutn})(HomepageLayout);
