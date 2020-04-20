@@ -11,8 +11,8 @@ import {
   List,
   Segment,
 } from 'semantic-ui-react'
-import  airqualityimg from '../images/airquality.jpg';
-import  weatherrepoimg from '../images/weather.jpg';
+import  airqualityimg from './images/airquality.jpg';
+import  weatherrepoimg from './images/weather.jpg';
 
  
 const HomepageHeading = () => (
