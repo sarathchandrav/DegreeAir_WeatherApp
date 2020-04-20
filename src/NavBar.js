@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import AirQualSearch from './AirQualSearch';
-import WeatherRepoSearch from './WeatherRepoSearch';
+import WeatherReportSearch from './WeatherReportSearch';
 
 const Label = styled.div`
                         position: relative;
@@ -37,7 +37,7 @@ const NavBar = (props) => {
                     <Label> Current Location:{props.weather.loco.name},</Label>
                     <Label>Temperature:{props.weather.currentObservation.temperature}&deg;</Label> 
                     <Image src={imgSrc}></Image>
-                    <SearchBarDiv><WeatherRepoSearch /></SearchBarDiv>
+                    <SearchBarDiv><WeatherReportSearch /></SearchBarDiv>
                 </NavSearch>
             )
         }

@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 //import { fetchSearchCityAPI } from './actions/index';
 
 import { Link } from 'react-router-dom';
-class WeatherRepoSearch extends React.Component {
+class WeatherReportSearch extends React.Component {
     renderInput = (searchProps) => {
         const search =  '/WeatherReport/Search/'+searchProps.input.value;
         return (<div><input {...searchProps.input} /><button><Link to={search}>search</Link></button></div>);
@@ -28,5 +28,5 @@ class WeatherRepoSearch extends React.Component {
 
 
 
-export default reduxForm({form: 'weatherRepoForm'})(WeatherRepoSearch);
+export default reduxForm({form: 'weatherRepoForm'})(WeatherReportSearch);
 
