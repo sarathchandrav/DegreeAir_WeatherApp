@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchAPI } from './actions/index';
 
-import './css/AirQuality';
+import './css/AirQuality.scss';
 //import AirQualSearch from './AirQualSearch';
 import NavBar from './NavBar';
 import styled from 'styled-components';
