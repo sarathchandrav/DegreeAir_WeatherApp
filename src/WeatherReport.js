@@ -2,7 +2,7 @@ import React from 'react';
 import './css/WeatherReport.scss'
 import axios from 'axios';
 import CurrentLocoWeather from './CurrentLocoWeather';
-import WeatherRepoSearch from './WeatherRepoSearch';
+
 import NavBar from './NavBar';
 
 

@@ -30,4 +30,3 @@ class WeatherRepoSearch extends React.Component {
 
 export default reduxForm({form: 'weatherRepoForm'})(WeatherRepoSearch);
 
-//export default connect( mapStateToProps , {fetchSearchCityAPI})(formWrapped)

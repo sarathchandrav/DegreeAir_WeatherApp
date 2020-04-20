@@ -30,4 +30,3 @@ class AirQualSearch extends React.Component {
 
 export default reduxForm({form: 'airQualSearch'})(AirQualSearch);
 
-//export default connect( mapStateToProps , {fetchSearchCityAPI})(formWrapped)
