@@ -15,7 +15,7 @@ class inputLocationWeather extends React.Component {
     async componentDidMount() {
        // var param = window.location.search.slice(6);
         const URL1 = "http://api.weatherstack.com/current?";
-        const ACCESS_KEY = 'a296dd67113d575ef3e5ab0bd9e2fbc3';
+        const ACCESS_KEY = '7c3ceae98753154b680ece1c3a04f7a1';
         //this.setState({ param: this.props.match.params.cityname })
         const responce = await axios.get(URL1, { params: { query: this.state.param, access_key: ACCESS_KEY } });
         this.setState({ resp: responce.data, loading: false })

@@ -85,7 +85,7 @@ class inputLocationAirQuality extends React.Component {
                     return (
                             <AreaContainer>
                                 <AreaLabel>
-                                    <Link to={area.location} smooth={true} duration={1000}>
+                                    <Link href="/" to={area.location} smooth={true} duration={1000}>
                                         {area.location}
                                     </Link>
                                 </AreaLabel>

@@ -15,6 +15,7 @@ $backgroundColor:black;
             font-weight: $fontWeight;
         }
         .lable {
+            color: white;
             margin: $margin;
             padding: $padding;
             font-weight: $fontWeight;
@@ -22,44 +23,22 @@ $backgroundColor:black;
                 background-color: rgba(56, 55, 55, 0.993);
             }
             .link {
-                color:$fontColor;
-               
+                color:$fontColor; 
             } 
         }
         
-        .logIn-btn{
-            margin-left: 4px;
-            float:right;
-            padding: 4px 18px 4px 18px;
-            background-color: black;
-            color: white;
-            font-size: medium;
-            font-weight: bolder;
-            border-radius: 5px;
-            &:hover{
-                background-color:white;
-                color: black;
-            }
-        }
-        .signIn-btn{
-            float:right;
-            margin-left: 5px;
-            padding: 4px 18px 4px 18px;
-            background-color: black;
-            color: white;
-            font-size: medium;
-            font-weight: bolder;
-            border-radius: 5px;
-            &:hover{
-                background-color:white;
-                color: black;
-            }
-        }
     }
 
     
 }
 
-.auth-btn{
+.HeaderDesktopView {
     display: inline;
+}
+
+@media (max-width:  760px){
+    .HeaderDesktopView{
+        display: none;
+    }
+    
 }

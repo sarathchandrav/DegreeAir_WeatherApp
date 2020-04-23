@@ -50,9 +50,6 @@ const WeatherCard = (props) => {
                 </div>
             </span>
         </div>
-        <div className="SeeHourly-btn">
-            SEE HOURLY
-        </div>
     </div>
     )
 }

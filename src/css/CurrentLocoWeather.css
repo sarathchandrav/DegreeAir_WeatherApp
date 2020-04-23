@@ -2,7 +2,7 @@
     position: relative;
     top: 3em;
     border: solid 3px black;
-    height: 375px;
+    height: 100vh;
     background-color: lightskyblue;
     padding: 2em;
     font-weight: bold;
@@ -21,7 +21,7 @@
     position: relative;
      left: 7%;
 }
-.infoDiv{
+/* .infoDiv{
     font-size: 2em;
     top: 1em;
     background-color: powderblue;
@@ -29,7 +29,7 @@
     width: 58%;
     padding: 20px;
     position: absolute;
-}
+} */
 .SeeHourly-btn{
     position: relative;
     width: 38%;
@@ -38,4 +38,24 @@
     color: cornsilk;
     font-size: 2em;
     background-color: cadetblue;
+}
+
+@media (min-width: 766px){
+    .infoDiv{
+        font-size: 2em;
+    top: 1em;
+    background-color: powderblue;
+    left: 40%;
+    width: 58%;
+    padding: 20px;
+    position: absolute;
+    }
+}
+@media (max-width: 760px){
+    .infoDiv{
+        font-size: 2em;
+        
+        padding: 20px;
+        
+    }
 }

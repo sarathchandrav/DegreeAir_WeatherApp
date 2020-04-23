@@ -4,10 +4,15 @@ import AirQualSearch from './AirQualSearch';
 import WeatherReportSearch from './WeatherReportSearch';
 
 const Label = styled.div`
-                        position: relative;
-                        top:-15px;
-                        font-size:x-large;
-                        display:inline;
+                        @media (min-width: 768px) {
+                            position: relative;
+                            top:-15px;
+                            font-size:x-large;
+                            display:inline;
+                          }
+                        @media (max-width: 766px) {
+                            font-size: 20px;
+                          }
                         `
 const NavSearch = styled.div`       
                         background: #2185D0;

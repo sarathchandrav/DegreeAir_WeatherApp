@@ -1,0 +1,18 @@
+.auth-btn{
+    display: inline;
+}
+
+.signIn-btn{
+    float:right;
+    margin-left: 5px;
+   
+    background-color: black;
+    color: white;
+    font-size: medium;
+    font-weight: bolder;
+    border-radius: 5px;
+    &:hover{
+        background-color:white;
+        color: black;
+    }
+}

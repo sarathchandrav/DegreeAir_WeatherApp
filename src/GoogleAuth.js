@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Header.scss';
+import './css/GoogleAuth.scss';
 
 import {connect} from 'react-redux';
 import {signInn, signOutn} from './actions/index'

@@ -17,7 +17,7 @@ import  weatherrepoimg from './images/weather.jpg';
  
 const HomepageHeading = () => (
   <div className='MiddleHeading' >
-    <Header
+    <Header 
       as='h1'
       content='DEGREE AIR'
       inverted
@@ -26,7 +26,7 @@ const HomepageHeading = () => (
         fontWeight: 'normal',
         marginBottom: 0,
         marginTop: '3em',
-        paddingLeft:'40%'
+        paddingLeft:'40%',
       }}
     />
     <Header
